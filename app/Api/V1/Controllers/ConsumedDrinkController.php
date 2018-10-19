@@ -34,7 +34,9 @@ class ConsumedDrinkController extends Controller
         //     throw new HttpException(500);
         // }
         
-       $results = ConsumedDrink::orderBy('drink', 'desc')->take(1)->get();
+       //$results = ConsumedDrink::orderBy('created_at', 'desc')->take(1)->get();
+
+       $results = ConsumedDrink::whereDate('created_at', Carbon::today())->get();
 
         return response()
             ->json([
