@@ -29,5 +29,7 @@ HOST=0.0.0.0 && npm start
 
 ### APIs:
 http://127.0.0.1/api/consumedDrinks
+
 http://127.0.0.1/api/consumedDrink
+
 http://127.0.0.1/api/drinkList
