@@ -36,7 +36,7 @@ class ConsumedDrinkController extends Controller
         
        //$results = ConsumedDrink::orderBy('created_at', 'desc')->take(1)->get();
 
-       $results = ConsumedDrink::whereDate('created_at', Carbon::today())->get();
+       $results = ConsumedDrink::whereDate('created_at', DB::raw('CURDATE()'))->get();
 
         return response()
             ->json([
