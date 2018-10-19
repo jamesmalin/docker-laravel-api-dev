@@ -43,7 +43,7 @@ services:
         condition: none
 
   react:
-    image: teracy/create-react-app
+    image: jamesmalin/react-app:version3
     deploy:
       mode: replicated
       replicas: 1

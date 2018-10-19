@@ -12,9 +12,19 @@ cd docker-laravel-api-dev
 composer install
 yarn install
 docker-compose -f docker-compose-dev.yml up --build -d --force-recreate
+```
+
+Go into the Laravel container:
+```
 docker exec -it docker-laravel-api-dev_php_1 /bin/bash
 php artisan migrate:fresh
 php artisan db:seed
+```
+
+Go into the React container:
+```
+docker exec -it docker-laravel-api-dev_react_1 /bin/bash
+HOST=0.0.0.0 && npm start
 ```
 
 ### Dev or Local Mode
