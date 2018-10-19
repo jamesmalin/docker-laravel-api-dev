@@ -27,16 +27,7 @@ docker exec -it docker-laravel-api-dev_react_1 /bin/bash
 HOST=0.0.0.0 && npm start
 ```
 
-### Dev or Local Mode
-* docker-compose-dev.yml: generate automatically folders and require-dev dependencies on your local workspace including Xdebug.
-Note: the yaml file has a key called:"XDEBUG_MODE", this yaml by default has the value true (1) to install it.
-
-You can appreciate the dependencies generated automatically on your workspace!
-
-## Running the tests
-
-You have a [Travis](https://travis-ci.org/) Pipeline to apply Continous Integration, and other technology to test this environment.
-
-You can modify the runtests.sh from the [scripts folder](https://raw.githubusercontent.com/jfernancordova/docker-laravel-api-dev/master/scripts/runtests.sh)
-
-Insert jobs, instructions, builds in [this pipeline](https://raw.githubusercontent.com/jfernancordova/docker-laravel-api-dev/master/.travis.yml)
+### APIs:
+http://127.0.0.1/api/consumedDrinks
+http://127.0.0.1/api/consumedDrink
+http://127.0.0.1/api/drinkList
