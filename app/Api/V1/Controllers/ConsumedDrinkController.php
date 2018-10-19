@@ -10,6 +10,7 @@ use App\Api\V1\Requests\ConsumedDrinkRequest;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Auth;
+use Carbon\Carbon;
 
 class ConsumedDrinkController extends Controller
 {
@@ -34,8 +35,6 @@ class ConsumedDrinkController extends Controller
         //     throw new HttpException(500);
         // }
         
-       //$results = ConsumedDrink::orderBy('created_at', 'desc')->take(1)->get();
-
        $results = ConsumedDrink::whereDate('created_at', Carbon::today())->get();
 
         return response()
