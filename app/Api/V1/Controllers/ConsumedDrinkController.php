@@ -34,7 +34,7 @@ class ConsumedDrinkController extends Controller
         //     throw new HttpException(500);
         // }
         
-       $results = ConsumedDrink::orderBy('drink', 'desc')->take(10)->get();
+       $results = ConsumedDrink::orderBy('drink', 'desc')->take(1)->get();
 
         return response()
             ->json([

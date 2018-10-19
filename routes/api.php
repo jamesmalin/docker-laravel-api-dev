@@ -46,5 +46,6 @@ $api->version('v1', function (Router $api) {
     ]);
 
     $api->get('drinkList', 'App\\Api\\V1\\Controllers\\ListController@list')->middleware('cors');
+    $api->get('consumedDrinks', 'App\\Api\\V1\\Controllers\\ConsumedDrinkController@list')->middleware('cors');
     $api->post('consumedDrink', 'App\\Api\\V1\\Controllers\\ConsumedDrinkController@addToList')->middleware('cors');
 });
