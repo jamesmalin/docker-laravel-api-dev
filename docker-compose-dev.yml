@@ -43,7 +43,7 @@ services:
         condition: none
 
   react:
-    image: jamesmalin/react-app:version3
+    image: jamesmalin/react-app:latest
     deploy:
       mode: replicated
       replicas: 1
